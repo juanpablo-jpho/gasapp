@@ -1,0 +1,7 @@
+{
+  "name": "gasapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
