@@ -6,14 +6,14 @@ export const environment = {
   production: false,
   ApiKeyGoogleMaps: 'AIzaSyC-----api key',
   firebaseConfig: {
-    apiKey: 'AIzaSyAveVbqSbUJ5Nn8iiCydM2gLswXSy5dcSg',
+    apiKey: 'AIzaS-----',
     authDomain: "gasdomi.firebaseapp.com",
-    databaseURL: "https://gasdomi.firebaseio.com",
-    projectId: "gasdomi",
-    storageBucket: "gasdomi.appspot.com",
-    messagingSenderId: "674361185046",
-    appId: "1:674361185046:web:ce888f500f782f8b95b637",
-    measurementId: "G-MEV4VF0Z19"
+    databaseURL: "https://gas-----rebaseio.com",
+    projectId: "ga-----omi",
+    storageBucket: "gasdo-----pot.com",
+    messagingSenderId: "67-----046",
+    appId: "1:67436-----50637",
+    measurementId: "G-ME-----V4Z19"
   }
 };
 
