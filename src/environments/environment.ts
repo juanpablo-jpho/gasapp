@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  ApiKeyGoogleMaps: 'AIzaSyCAwcOlJ3ItOO25Lgw8xcAg62Lr3Q69HDQ',
+  ApiKeyGoogleMaps: 'AIzaSyC-----api key',
   firebaseConfig: {
     apiKey: 'AIzaSyAveVbqSbUJ5Nn8iiCydM2gLswXSy5dcSg',
     authDomain: "gasdomi.firebaseapp.com",
