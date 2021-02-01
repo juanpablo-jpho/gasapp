@@ -1,0 +1,52 @@
+
+
+
+.img-producto {
+    width: 200px;
+    margin: auto;
+}
+
+.precio {
+    margin: 0px 20px 10px 0px;
+    text-align: right;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    color: #0062cc;
+    font-weight: bold;
+}
+
+.tachado {
+    margin: 10px 20px 0px 0px;
+    text-align: right;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    color: #343a40;
+    text-decoration: line-through;
+}
+
+.icon-producto {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 30px;
+    margin: 10px;
+    background: #d39e00;
+    padding: 10px;
+    border-radius: 100%;
+    color: white;
+}
+
+.comentarios {
+    color: blue !important;
+    background: #dae0e5;
+    width: 150px;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.icon {
+    font-size: 20px;
+    margin-bottom: -5px;
+}

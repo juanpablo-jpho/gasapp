@@ -1,0 +1,146 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="subtitulo ion-text-wrap">
+        Perfil
+    </ion-title>
+    
+    <ion-buttons slot="start">
+      <ion-button (click)="openMenu()">
+         <ion-icon color="primary" slot="icon-only"  name="menu-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div *ngIf="!uid.length">
+
+    <h3 class="subtitulo encabezado">Ingrese tus datos 3</h3>
+    <ion-item>
+      <ion-label   class="normal" position="floating">
+          Email
+      </ion-label>
+      <ion-input name="email"  [(ngModel)]="cliente.email" class="normal" type="text" inputmode="text">
+      </ion-input>
+    </ion-item>
+    <ion-item *ngIf="!ingresarEnable">
+      <ion-label   class="normal" position="floating">
+          Nombre:
+      </ion-label>
+      <ion-input [(ngModel)]="cliente.nombre" class="normal" type="text" inputmode="text">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label   class="normal" position="floating">
+          Celular:
+      </ion-label>
+      <ion-input [(ngModel)]="cliente.celular" class="normal"  type="text" >
+      </ion-input>
+    </ion-item>
+    <ion-item *ngIf="!ingresarEnable">
+      <ion-label   class="normal" position="floating">
+         Referencia a la ubicació
+      </ion-label>
+      <ion-input  [(ngModel)]="cliente.referencia" class="normal" type="text" inputmode="text">
+      </ion-input>
+    </ion-item>
+  
+    <ion-item *ngIf="!ingresarEnable">
+      <ion-label class="normal">
+          Foto refencial:
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+           <label for="file-upload">
+             <ion-icon slot="icon-only" name="images"></ion-icon>
+           </label>
+            <input  (change)="newImageUpload($event)" id="file-upload" style="display: none" type="file"  accept="image/*">
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+    <ion-item *ngIf="!ingresarEnable">
+      <img class="image"  [src]="cliente.foto">
+    </ion-item>
+  
+    <div style="text-align: end; margin: 10px;">
+      <ion-button  *ngIf="!ingresarEnable" (click)="registrarse()"  class="normal" color="dark">registrarse</ion-button>
+      <ion-button  *ngIf="!ingresarEnable" (click)="ingresarEnable = true"  class="normal" color="dark">o ingresar</ion-button>
+      <ion-button  *ngIf="ingresarEnable" (click)="ingresar()"  class="normal" color="dark">login</ion-button>
+      <ion-button  *ngIf="ingresarEnable" (click)="ingresarEnable = false"  class="normal" color="dark">o registrarse</ion-button>
+    </div>
+
+  </div>
+
+  <div *ngIf="uid.length" >
+
+    <h3 class="subtitulo encabezado">Tus datos 1</h3>
+    <ion-item>
+      <ion-label  class="normal">
+          Email: {{cliente.email}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label   class="normal">
+          Celular: {{cliente.celular}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label   class="normal" position="floating">
+          Nombre:
+      </ion-label>
+      <ion-input  [(ngModel)]="cliente.nombre" class="normal" type="text" inputmode="text">
+      </ion-input>
+    </ion-item>
+
+    <ion-item (click)="addDirection()">
+      <ion-label class="normal">
+         Ubicación
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+             <ion-icon slot="icon-only" color="danger" name="location"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label   class="normal" position="floating">
+         Referencia a la ubicación
+      </ion-label>
+      <ion-input  [(ngModel)]="cliente.referencia" class="normal" type="text" inputmode="text">
+      </ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label class="normal">
+          Foto refencial:
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+           <label for="file-upload">
+             <ion-icon slot="icon-only" name="images"></ion-icon>
+           </label>
+            <input  (change)="newImageUpload($event)" id="file-upload" style="display: none" type="file"  accept="image/*">
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+    <ion-item>
+      <img class="image"  [src]="cliente.foto">
+    </ion-item>
+
+    
+    <div style="text-align: end; margin: 10px;">
+      <ion-button  (click)="guardarUser()"  class="normal" color="dark">guardar</ion-button>
+    </div>
+    <div style="text-align: end; margin: 10px;">
+      <ion-button  (click)="salir()"  class="normal" color="dark">salir</ion-button>
+    </div>
+
+  </div>
+
+  
+</ion-content>

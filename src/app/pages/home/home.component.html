@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="subtitulo ion-text-wrap">
+        GasDomi
+    </ion-title>
+    
+    <ion-buttons slot="start">
+      <ion-button (click)="openMenu()">
+         <ion-icon color="primary" slot="icon-only"  name="menu-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/carrito']" >
+        <ion-icon color="primary" slot="icon-only"  name="cart-sharp"></ion-icon>
+     </ion-button>
+      <ion-button [routerLink]="['/perfil']" >
+         <ion-icon color="primary" slot="icon-only"  name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div *ngFor="let producto of productos">
+      <app-producto [producto]= producto></app-producto>
+    </div>
+
+    <div class="text-center m-5">
+      <ion-button (click)="sendNotification()" class="normal">
+          enviar notificación
+      </ion-button>
+    </div>
+
+
+
+
+</ion-content>

@@ -1,0 +1,36 @@
+   <ion-header>
+         <ion-toolbar>
+            <ion-buttons slot="start">
+               <ion-button (click)="modalController.dismiss()">
+                  <ion-icon name="arrow-back" color="dark"></ion-icon>
+               </ion-button>
+            </ion-buttons>
+            <ion-title class="normal ion-text-wrap">
+               Ubica el selector en la ubicación deseada
+            </ion-title>
+         </ion-toolbar>
+   </ion-header>
+
+   <ion-content>
+
+
+      <div #map class="map">
+
+      </div>
+
+
+       <ion-chip class="aceptar" (click)="aceptar()">
+         <ion-label class="normal">Aceptar</ion-label>
+         <ion-icon name="checkmark" ></ion-icon>
+      </ion-chip>
+
+
+
+      <ion-chip class="miubicacion" (click)="mylocation()">
+         <ion-label class="normal">Mi ubicación actual</ion-label>
+         <ion-icon name="locate" ></ion-icon>
+    </ion-chip>
+
+
+
+   </ion-content>

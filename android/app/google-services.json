@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "674361185046",
+    "firebase_url": "https://gasdomi.firebaseio.com",
+    "project_id": "gasdomi",
+    "storage_bucket": "gasdomi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674361185046:android:bea63b404d845b6b95b637",
+        "android_client_info": {
+          "package_name": "com.efecode.gassapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674361185046-j4opadub90fd2a46p0if9nv6afhsbe1d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkeTHQVGLVAUXy5DohqNgnc9dgSvertUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674361185046-j4opadub90fd2a46p0if9nv6afhsbe1d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,27 @@
+
+
+
+<ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+          <ion-img [src]="productoPedido.producto.foto"></ion-img>
+      </ion-col>
+      <ion-col size="8">
+          <ion-item>
+            <ion-label class="subtitulo ion-text-wrap">{{productoPedido.producto.nombre}}</ion-label>
+            <ion-buttons slot="end" *ngIf="botones">
+              <ion-button (click)="addCarrito()" class="icon-add">
+                <ion-icon slot="icon-only" name="add"></ion-icon>
+              </ion-button>
+              <ion-button (click)="removeCarrito()" class="icon-remove">
+                <ion-icon slot="icon-only" name="remove"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-item>
+          <p class="normal m-2">Precio: {{productoPedido.producto.precioReducido}}</p>
+          <p class="normal m-2">Cantidad: {{productoPedido.cantidad}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
